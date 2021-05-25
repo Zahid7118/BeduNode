@@ -19,7 +19,7 @@ mongoose.connect('mongodb://admin:admin@cluster0-shard-00-00.jhmjj.mongodb.net:2
 
 const db = mongoose.connection;
 db.on('error', (error) => {
-    console.log("error: ", err);
+    console.log("error: ", error);
 });
 
 db.once('open', () => {
