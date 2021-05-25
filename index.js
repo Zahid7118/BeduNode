@@ -6,9 +6,9 @@ app.listen(port);
 
 app.use(express.json());
 
-// app.get('/', (req, res) => {
-//     res.send('Hello word');
-// });
+app.get('/', (req, res) => {
+    res.send('Hello word');
+});
 
 // app.get('/hello/:name', (req, res) => {
 //     res.send(`Hello ${req.params.name}`);
@@ -46,12 +46,14 @@ app.get('/pets', (req, res) => {
         res.json(result)
     })
 })
+
 app.get('/pets/:id', (req, res) => {
     Pet.findById(req.params.id)
         .then((result) => {
             res.json(result)
         })
 })
+
 app.put('/pets/:id', (req, res) => {
     Pet.findByIdAndUpdate(req.params.id, req.body, { new: true })
         .then((result) => {
