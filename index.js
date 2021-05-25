@@ -6,9 +6,9 @@ app.listen(port);
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Hello word');
-});
+// app.get('/', (req, res) => {
+//     res.send('Hello word');
+// });
 
 // app.get('/hello/:name', (req, res) => {
 //     res.send(`Hello ${req.params.name}`);
